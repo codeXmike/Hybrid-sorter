@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button onclick="fetchSortedArray([
+    42, 367, 891, 156, 723, 945, 238, 574, 619, 802,
+    105, 483, 760, 327, 654, 198, 531, 876, 209, 642,
+    713, 95, 420, 851, 264, 597, 308, 735, 146, 489,
+    672, 23, 814, 357, 690, 123, 456, 789, 234, 567,
+    890, 321, 654, 987, 210, 543, 876, 129, 462, 795,
+    18, 351, 684, 927, 240, 573, 906, 339, 762, 195,
+    528, 861, 294, 627, 150, 483, 816, 249, 582, 915,
+    72, 405, 738, 171, 504, 837, 360, 693, 126, 459,
+    792, 135, 468, 801, 234, 567, 900, 333, 666, 999,
+    111, 444, 777, 222, 555, 888, 111, 222, 333, 444
+])">Sort</button>
+
+    <script>
+        async function fetchSortedArray(unsortedArray) {
+            const response = await fetch('http://localhost:5000/sort', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ array: unsortedArray }),
+            });
+            const data = await response.json();
+            // return data.sortedArray;
+            console.log(data.sortedArray)
+        }
+
+       
+
+    </script>
+</body>
+</html>
