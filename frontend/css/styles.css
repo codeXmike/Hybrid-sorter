@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  
+  .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to right, #3f4a69, #030914);
+    text-align: center;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b4d;
+    padding: 1.2rem 2rem;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .content {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .content li a {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .content li a:hover {
+    color: #38bdf8;
+    text-decoration: underline;
+
+  }
+  
+  
+  .body {
+    padding: 4rem 2rem 2rem;
+  }
+  
+  .body h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .body p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .demo {
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .demo:hover {
+    background-color: #0ea5e9;
+  }
+  
+  .features {
+    background-color: #1e293b;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-item {
+    background-color: #334155;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 0.9rem;
+  }
+  
