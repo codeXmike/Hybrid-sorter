@@ -50,12 +50,15 @@
     transition: color 0.3s;
   }
   
-  .content li a:hover {
+  .content li .citems:hover {
     color: #38bdf8;
     text-decoration: underline;
 
   }
-  
+  .services:hover{
+    cursor: default;
+    color: #38bdf8;
+  }
   
   .body {
     padding: 4rem 2rem 2rem;
@@ -118,5 +121,22 @@
     background-color: #0f172a;
     color: #94a3b8;
     font-size: 0.9rem;
+  }
+  .sList{
+    position: absolute;
+    display: none;
+    list-style: none;
+  }
+  .sitems{
+    cursor: pointer;
+  }
+  .sitems:hover{
+    text-decoration: underline;
+  }
+  .citems:hover{
+    cursor: pointer;
+  }
+  .chover:hover .sList{
+    display: block;
   }
   
