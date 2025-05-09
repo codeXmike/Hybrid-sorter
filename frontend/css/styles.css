@@ -85,6 +85,10 @@ body {
 }
 
 .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 4rem 2rem 2rem;
 }
 
@@ -115,7 +119,6 @@ body {
   background-color: #0ea5e9;
 }
 
-* ===== Features Section ===== */
 .features {
   background-color: #1e293b;
   padding: 4rem 2rem;
@@ -133,29 +136,13 @@ body {
   gap: 2rem;
 }
 
-.feature-block {
+.feature-item {
   background-color: #334155;
   padding: 1.5rem;
   border-radius: 0.75rem;
-  text-align: left;
-  transition: transform 0.3s ease;
+  font-size: 1.1rem;
 }
 
-.feature-block:hover {
-  transform: translateY(-5px);
-}
-
-.feature-item {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.feature-desc {
-  font-size: 1rem;
-  color: #cbd5e1;
-  line-height: 1.5;
-}
 .footer {
   text-align: center;
   padding: 1.5rem;

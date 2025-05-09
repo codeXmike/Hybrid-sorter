@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const content = document.querySelector('.content');
     const servicesItem = document.querySelector('.services');
+    const servicesItemRt = servicesItem.getBoundingClientRect();
     const sList = document.querySelector('.sList');
   
     // Toggle main mobile menu
@@ -77,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Desktop behavior
         servicesItem.style.cursor = '';
         sList.style.position = 'absolute';
-        sList.style.left = '0';
-        sList.style.top = '100%';
+        sList.style.left = `${servicesItemRt.left + window.scrollX-40}px`;
+        sList.style.top = servicesItemRt.top + window.screenY;
         sList.style.minWidth = '150px';
         sList.style.display = '';
       }
