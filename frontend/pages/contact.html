@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="./css/contact.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  
+  <script>
+    (function(){
+      emailjs.init("MqgABScrzIOHEcXQR"); // 🔁 Replace with your actual public key
+    })();
+  </script>
+</head>
+<body>
+  <div class="contact-container">
+    <div class="form-box">
+      <h2>Get in Touch</h2>
+      <form id="contactForm" class="contactForm">
+        <input type="text" name="from_name" placeholder="Your Name" required />
+        <input type="email" name="from_email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="responseMessage"></p>
+      </form>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
