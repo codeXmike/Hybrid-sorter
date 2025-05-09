@@ -8,18 +8,43 @@
 
 </head>
 <body>
-  <div class="contact-container">
-    <div class="form-box">
-      <h2>Get in Touch</h2>
-      <form id="contactForm" class="contactForm">
-        <input type="text" name="from_name" placeholder="Your Name" required />
-        <input type="email" name="from_email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-        <p id="responseMessage"></p>
-      </form>
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="set1">
+        <div class="hamburger" id="hamburger">☰</div>
+        <div class="logo">Geass Hybrid Sort</div>
+      </div>
+      <ul class="content">
+        <li><a class="citems" href="../index.html">Home</a></li>
+        <li><a class="citems" href="features.html">Features</a></li>
+        <li class="chover">
+          <a class="services">Services</a>
+          <ul class="sList">
+            <li class="sitems"><a href="">Demo</a></li>
+            <li class="sitems"><a href="">Product</a></li>
+          </ul>
+        </li>
+        <li><a class="citems" href="ourteam.html">Our Team</a></li>
+        <li><a class="citems" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="wrap">
+      <div class="contact-container">
+        <div class="form-box">
+          <h2>Get in Touch</h2>
+          <form id="contactForm" class="contactForm">
+            <input type="text" name="from_name" placeholder="Your Name" required />
+            <input type="email" name="from_email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p id="responseMessage"></p>
+          </form>
+        </div>
+      </div>
     </div>
+    
   </div>
+  
   <script src="../js/script.js"></script>
 </body>
 </html>
