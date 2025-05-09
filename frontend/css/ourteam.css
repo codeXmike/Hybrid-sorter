@@ -1,0 +1,64 @@
+body{
+    width: 100vw;
+    background: linear-gradient(135deg, #3f4a69, #030914);
+}
+.introDiv{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;   
+}
+.introDiv>.introText{
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+}
+.introDiv>.introPar{
+    font-size: 1rem;
+    font-weight: 100;
+    font-style: italic;
+    color: white;
+}
+.sect{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont{
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    padding: 3rem .8rem;
+}
+.card{
+    margin: 20px;
+    padding: 17px 30px;
+    border-radius: 13px;
+    width: 150px;
+    height: 200px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    background-color: #91919152;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(40px);
+}
+
+.card>.name{
+    color: aliceblue;
+    font-size: 1.6rem;
+}
+.card>.role{
+    padding: .2rem 0;
+    font-style: italic;
+    color: #aaaaaa;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
