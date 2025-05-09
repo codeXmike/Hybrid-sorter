@@ -1,0 +1,82 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-container {
+    width: 500px;
+    max-width: 500px;
+    background: linear-gradient(120deg, rgb(198, 212, 231), #0f172a);
+    padding: .4rem .55rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: slideIn 0.8s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .form-box>h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  input, textarea {
+    background-color: transparent;
+    width: 70%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid rgb(39, 9, 39);
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+  }
+  input::placeholder, textarea::placeholder{
+    color: rgb(255, 255, 255);
+  }
+  input:focus, textarea:focus{
+    border-color: rgb(255, 255, 255);
+  }
+  button {
+    width: 30%;
+    padding: 12px;
+    border: none;
+    background-color: #007bff;
+    color: rgba(255, 247, 247, 0.945);
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, padding .2s ease;
+  }
+  
+  button:hover {
+    padding: 1rem 1.3rem;
+    background-color: #0056b3;
+  }
+  
+  #responseMessage {
+    text-align: center;
+    margin-top: 15px;
+    color: green;
+  }
+
+  .contactForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
