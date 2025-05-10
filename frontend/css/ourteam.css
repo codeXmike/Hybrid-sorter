@@ -3,12 +3,13 @@ body{
     font-family: 'Segoe UI', sans-serif;
     color: #f1f5f9;
     width: 100vw;
-    background: linear-gradient(to right, #3f4a69, #030914);
+    background: linear-gradient(to bottom right, #485261, #0c0c1e);
 }
 
 .introDiv{
     display: flex;
     width: 100%;
+    padding: 1.7rem 0;
     align-items: center;
     flex-direction: column;
     justify-content: center;   
@@ -82,6 +83,7 @@ body{
   
   /* ===== Dropdown and Hover Styles ===== */
   .sList {
+    text-align: center;
     position: absolute;
     display: none;
     list-style: none;
@@ -91,6 +93,7 @@ body{
   }
   
   .sitems {
+    padding: .3rem 0;
     cursor: pointer;
   }
   

@@ -27,7 +27,7 @@ body {
 .head {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to right, #3f4a69, #030914);
+  background: linear-gradient(to bottom right, #485261, #0c0c1e);
   text-align: center;
 }
 
@@ -90,6 +90,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem 2rem;
+  height: 100%;
 }
 
 .bHead {

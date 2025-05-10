@@ -27,7 +27,7 @@ body {
 .head {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to right, #3f4a69, #030914);
+  background: linear-gradient(to bottom right, #485261, #0c0c1e);
   text-align: center;
 }
 
@@ -51,7 +51,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 300px;
+  width: 250px;
 }
 
 .logo {
@@ -119,6 +119,7 @@ body {
   background-color: #1e293b;
   padding: 4rem 2rem;
   text-align: center;
+  height: 100%;
 }
 
 .features h2 {
@@ -247,7 +248,7 @@ body {
   }
 
   .sitems {
-    padding: 0.75rem 1rem;
+    padding: .3rem 0;
     white-space: nowrap;
   }
 
