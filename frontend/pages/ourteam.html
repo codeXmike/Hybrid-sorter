@@ -6,6 +6,33 @@
     <title>Our Team</title>
     <link rel="stylesheet" href="../css/ourteam.css">
 </head>
+<style>
+    
+
+        .pic img {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pic img.loaded {
+            opacity: 1;
+        }
+
+        .loading-spinner {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(56, 189, 248, 0.2);
+            border-top: 4px solid #38bdf8;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+</style>
 <body>
     <div class="wrapper">
         <nav class="nav">
@@ -174,6 +201,34 @@
             </div>
         </section>
     </div>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.pic img');
+            
+            images.forEach(img => {
+                const spinner = document.createElement('div');
+                spinner.className = 'loading-spinner';
+                img.parentNode.insertBefore(spinner, img);
+                
+                img.onload = function() {
+                    this.classList.add('loaded');
+                    spinner.remove();
+                };
+                
+                // If image fails to load
+                img.onerror = function() {
+                    spinner.remove();
+                    this.alt = 'Image not available';
+                };
+                
+                // Trigger loading if image is already cached
+                if (img.complete) {
+                    img.classList.add('loaded');
+                    spinner.remove();
+                }
+            });
+        });
+    </script>
     <script src="../js/script.js"></script>
 </body>
 </html>

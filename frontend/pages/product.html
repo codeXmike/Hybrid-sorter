@@ -4,441 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hybrid Sorter</title>
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #485261, #0c0c1e);
-  background-attachment: fixed;
-  background-size: cover;
-  color: white;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
-
-.wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-  padding: 2rem;
-  text-align: center;
-  height: 100%;
-}
-
-header {
-  background-color: #121924;
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 1.8rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #00aaff;
-}
-
-h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1e293b73;
-  padding: 2% 2rem;
-}
-
-.hamburger {
-  font-size: 1.7rem;
-  display: none;
-  cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.set1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 250px;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.content {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-.content li a {
-  color: #f1f5f9;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.content li .citems:hover {
-  color: #38bdf8;
-  text-decoration: underline;
-}
-
-.services:hover {
-  cursor: default;
-  color: #38bdf8;
-}
-
-/* Dropdown and Hover Styles */
-.sList {
-  position: absolute;
-  display: none;
-  list-style: none;
-  background-color: #1e293b;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-.sitems {
-  cursor: pointer;
-}
-
-.sitems:hover {
-  text-decoration: underline;
-}
-
-.citems:hover {
-  cursor: pointer;
-}
-
-.chover:hover .sList {
-  display: block;
-}
-
-.features {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1rem;
-  background-color: #1e2733;
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-.feature-card {
-  background-color: #2c3747;
-  padding: 1.5rem 2rem;
-  border-radius: 10px;
-  min-width: 250px;
-  flex: 1;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.feature-card:hover {
-  transform: scale(1.05);
-}
-
-.footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: #0f172a;
-  color: #94a3b8;
-  font-size: 0.9rem;
-}
-
-.layout-row {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 5rem;
-}
-
-.product-text {
-  height: 100%;
-  max-width: 600px;
-  color: #ddd;
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: left;
-  margin-right: 2rem;
-}
-
-.download-section {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.download-btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #032536;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.download-btn:hover {
-  color: #00aaff;
-  transform: scale(1.05);
-}
-
-.screen {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 3rem 0 0 2rem;
-  background-color: #111;
-  color: #9ce995;
-  padding: 50px 2rem 2rem 1rem;
-  border-radius: 10px;
-  width: 700px;
-  font-family: 'Courier New', Courier, monospace;
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
-  min-height: 340px;
-  max-height: 340px;
-  position: relative;
-  white-space: pre;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.cont {
-  display: flex;
-  flex-direction: row-reverse;
-  height: 100%;
-}
-
-/* Language selector styles */
-.language-selector {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  gap: 5px;
-  z-index: 10;
-  flex-wrap: wrap;
-  max-width: calc(100% - 20px);
-}
-
-.language-option {
-  background-color: #2c3747;
-  padding: 5px 8px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.7rem;
-  transition: all 0.3s ease;
-  border: 1px solid #38bdf8;
-  white-space: nowrap;
-}
-
-.language-option:hover {
-  background-color: #3c7994;
-  transform: translateY(-3px);
-}
-
-.language-option.active {
-  background-color: #95dfff;
-  font-weight: bold;
-  color: #111;
-}
-
-/* Copy button styles */
-.copy-btn {
-  position: absolute;
-  top: 90%;
-  right: 2%;
-  background-color: #2c3747;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  transition: all 0.3s ease;
-  z-index: 11;
-}
-
-.copy-btn:hover {
-  background-color: #38bdf8;
-}
-
-.copy-btn.copied {
-  background-color: #4CAF50;
-}
-
-#code-content {
-  padding-top: 10px;
-  width: 100%;
-  overflow-x: auto;
-}
-
-@media (max-width: 950px) {
-  .cont {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  
-  .screen {
-    width: 90%;
-    margin: 2rem auto;
-    padding-top: 50px;
-  }
-  
-  .layout-row {
-    padding: 2rem;
-    align-items: center;
-  }
-  
-  .product-text {
-    margin-right: 0;
-    text-align: center;
-  }
-}
-
-@media (max-width: 880px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .content {
-    align-items: center;
-    list-style: none;
-    gap: 1.5rem;
-    overflow: hidden;
-    height: 0;
-    opacity: 0;
-    transition: height 0.3s ease, opacity 0.3s ease;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0;
-    will-change: height;
-  }
-
-  .content.active {
-    opacity: 1;
-  }
-
-  .bHead {
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
-
-  .logo {
-    font-size: 1.2rem;
-    padding: 0;
-  }
-
-  .chover {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .sList {
-    display: none;
-    background-color: #1e293b;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    margin-top: 0;
-    position: relative;
-  }
-
-  .sitems {
-    padding: 0.75rem 1rem;
-    white-space: nowrap;
-  }
-
-  .sitems a {
-    color: #f1f5f9;
-    text-decoration: none;
-    display: block;
-  }
-
-  .sitems:hover {
-    background-color: #334155;
-  }
-
-  .content.active .chover .sList {
-    display: none;
-  }
-
-  .services {
-    cursor: pointer;
-  }
-}
-
-@media (max-width: 600px) {
-  
-  .language-option {
-    padding: 4px 6px;
-    font-size: 0.6rem;
-  }
-  
-  .screen {
-    width: 95%;
-    font-size: 0.9rem;
-    min-height: 300px;
-    max-height: 300px;
-  }
-  
-  .layout-row {
-    padding: 1rem;
-  }
-  
-  .download-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
-}
-  </style>
+  <link rel="stylesheet" href="../css/product.css">
 </head>
 <body>
   <div class="wrapper">
@@ -466,9 +32,7 @@ h2 {
       <div class="cont">
         <div class="layout-row">
           <p class="product-text">
-            The Geass Hybrid Sort is an awesome Technology, developed but Team Code Geass. These intelligent minds
-            led my Obiora have been able to come up with a way to make sorting simpler. Thank Obiora and Thank you 
-            Team Geass for this wonderful piece of Tech.
+            Developed by Team Code Geass, our hybrid sorting algorithm combines the best of multiple approaches to deliver blazing-fast performance with optimized memory usage. Whether you're working with small datasets or millions of records, Geass Hybrid Sort automatically adapts to provide the most efficient sorting strategy.
           </p>
           <div class="download-section">
             <a href="#" class="download-btn">Download Hybrid Sort</a>
@@ -495,8 +59,6 @@ h2 {
     </main>
     
     
-    
-    
   </div>
   <footer class="footer">
     <p>&copy; 2025 Geass Sort. All rights reserved.</p>
@@ -514,38 +76,36 @@ h2 {
 //Installation:
 pip install geass_sort
       
-from geass_sort import hybrid_sort
-arr = [5, 2, 9, 1, 5, 6]
-sorted_arr = hybrid_sort(arr)
-print(sorted_arr)  # Output: [1, 2, 5, 5, 6, 9]`,
+<text style="color:orange">from</text> <text style="color:white">geass_sort</text> <text style="color:orange">import</text> <text style="color:white">hybrid_sort</text>
+<text style="color:white">arr = [5, 2, 9, 1, 5, 6]</text>
+<text style="color:white">sorted_arr = <text style="color:purple">hybrid_sort</text><text style="color:orange">(</text>arr<text style="color:orange">)</text></text>
+<text style="color:white"><text style="color:purple">print</text><text style="color:orange">(</text>sorted_arr<text style="color:orange">)</text></text>  <text style="color:green"># Output: [1, 2, 5, 5, 6, 9]</text>`,
 
-      java: `
-import com.geass.sort.HybridSort;
+java: `
+<text style="color:orange">import</text> <text style="color:white">com.geass.sort.HybridSort</text><text style="color:orange">;</text>
 
-public class Main {
-  public static void main(String[] args) {
-      int[] arr = {5, 2, 9, 1, 5, 6};
-      int[] sortedArr = HybridSort.sort(arr);
-      System.out.println(Arrays.toString(sortedArr)); // [1, 2, 5, 5, 6, 9]
-  }
-}`,
+<text style="color:orange">public class</text> <text style="color:white">Main</text> <text style="color:orange">{</text>
+  <text style="color:orange">public static void</text> <text style="color:white">main</text><text style="color:orange">(</text><text style="color:white">String</text><text style="color:orange">[]</text> <text style="color:white">args</text><text style="color:orange">)</text> <text style="color:orange">{</text>
+      <text style="color:white">int</text><text style="color:orange">[]</text> <text style="color:white">arr</text> <text style="color:orange">=</text> <text style="color:orange">{</text><text style="color:white">5, 2, 9, 1, 5, 6</text><text style="color:orange">};</text>
+      <text style="color:white">int</text><text style="color:orange">[]</text> <text style="color:white">sortedArr</text> <text style="color:orange">=</text> <text style="color:white">HybridSort</text><text style="color:orange">.</text><text style="color:white">sort</text><text style="color:orange">(</text><text style="color:white">arr</text><text style="color:orange">);</text>
+      <text style="color:white">System</text><text style="color:orange">.</text><text style="color:white">out</text><text style="color:orange">.</text><text style="color:white">println</text><text style="color:orange">(</text><text style="color:white">Arrays</text><text style="color:orange">.</text><text style="color:white">toString</text><text style="color:orange">(</text><text style="color:white">sortedArr</text><text style="color:orange">));</text> <text style="color:green">// [1, 2, 5, 5, 6, 9]</text>
+  <text style="color:orange">}</text>
+<text style="color:orange">}</text>`,
 
-      javascript: `
+javascript: `
 //Installation:
-//npm install geass_sort
+npm install geass_sort
       
-const { hybridSort } = require('geass-sort');
+<text style="color:orange">const</text> <text style="color:white">{ hybridSort }</text> <text style="color:orange">=</text> <text style="color:white">require</text><text style="color:orange">(</text>'geass-sort'<text style="color:orange">);</text>
 
-const arr = [5, 2, 9, 1, 5, 6];
-const sortedArr = hybridSort(arr);
-console.log(sortedArr); // [1, 2, 5, 5, 6, 9]`,
+<text style="color:orange">const</text> <text style="color:white">arr</text> <text style="color:orange">=</text> <text style="color:orange">[</text><text style="color:white">5, 2, 9, 1, 5, 6</text><text style="color:orange">];</text>
+<text style="color:orange">const</text> <text style="color:white">sortedArr</text> <text style="color:orange">=</text> <text style="color:white">hybridSort</text><text style="color:orange">(</text><text style="color:white">arr</text><text style="color:orange">);</text>
+<text style="color:white">console</text><text style="color:orange">.</text><text style="color:white">log</text><text style="color:orange">(</text><text style="color:white">sortedArr</text><text style="color:orange">);</text> <text style="color:green">// [1, 2, 5, 5, 6, 9]</text>`,
 
-      bash: `
+bash: `
+<text style="color:green"># Assuming geass-sort is installed and in PATH</text>
 
-# Assuming geass-sort is installed and in PATH
-
->>hsort --4, 79, 20, 32, 100, 32, 48, 78
-      `
+<text style="color:white">>>hsort --4, 79, 20, 32, 100, 32, 48, 78</text>`
     };
 
     // Handle language selection
@@ -557,7 +117,7 @@ console.log(sortedArr); // [1, 2, 5, 5, 6, 9]`,
         option.classList.add('active');
         // Update code content
         const lang = option.getAttribute('data-lang');
-        codeContent.innerText = codeSnippets[lang];
+        codeContent.innerHTML = codeSnippets[lang];
         console.log(codeSnippets[lang])
       });
     });
@@ -574,6 +134,8 @@ console.log(sortedArr); // [1, 2, 5, 5, 6, 9]`,
         }, 2000);
       });
     });
+    // Initialize with Python code colored
+  codeContent.innerHTML = codeSnippets.python;
   </script>
 </body>
 </html>

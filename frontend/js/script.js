@@ -82,6 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
         sList.style.top = servicesItemRt.top + window.screenY;
         sList.style.minWidth = '150px';
         sList.style.display = '';
+        servicesItem.addEventListener('click', function(e) {
+          e.preventDefault();
+          const dropdown = this.nextElementSibling;
+          if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+          } else {
+            dropdown.style.display = 'block';
+            document.querySelectorAll('.sList').forEach(item => {
+              if (item !== dropdown) item.style.display = 'none';
+            });
+          }
+        });
+        
       }
     }
   
