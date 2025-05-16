@@ -144,8 +144,8 @@ body{
 .card:hover{
     margin: 20px;
     padding: 17px 30px;
-    border: 2px solid rgb(29, 29, 29);
-    transform: scale(1.2);
+    border: 2px solid rgba(255, 163, 163, 0.514);
+    transform: scale(1.1);
     background: transparent;
     display: flex;
     flex-direction: column;

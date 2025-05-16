@@ -16,9 +16,12 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .wrapper {
+  height: 100%;
   flex: 1; /* Ensures it stretches to take up remaining space */
   display: flex;
   flex-direction: column;
