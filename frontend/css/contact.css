@@ -169,6 +169,7 @@ body, html {
     align-items: center;
   }
 
+  
   @media (max-width: 690px) {
     .nav {
       flex-direction: column;

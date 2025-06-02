@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hybrid Sorter</title>
-  <link rel="stylesheet" href="../css/product.css">
+  <title>Magnetic Sorter</title>
+  <link rel="stylesheet" href="../css/product.css" />
+
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 </head>
 <body>
   <div class="wrapper">
     <nav class="nav">
       <div class="set1">
         <div class="hamburger" id="hamburger">☰</div>
-        <div class="logo">Geass Hybrid Sort</div>
+        <div class="logo">Magnetic Sort</div>
       </div>
       <ul class="content">
         <li><a class="citems" href="../index.html">Home</a></li>
@@ -27,18 +35,20 @@
         <li><a class="citems" href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  
+
     <main>
       <div class="cont">
         <div class="layout-row">
           <p class="product-text">
-            Developed by Team Code Geass, our hybrid sorting algorithm combines the best of multiple approaches to deliver blazing-fast performance with optimized memory usage. Whether you're working with small datasets or millions of records, Geass Hybrid Sort automatically adapts to provide the most efficient sorting strategy.
+            Developed by Team Code Geass, <strong>Magnetic Sort</strong> is an experimental algorithm inspired by the behavior of magnetic fields.
+            Elements are influenced by simulated forces—larger values repel leftward, smaller values rightward—until stability is achieved.
+            It offers an engaging, physics-inspired approach to sorting, ideal for educational and visualization tools.
           </p>
           <div class="download-section">
-            <a href="#" class="download-btn">Download Hybrid Sort</a>
+            <a href="#" class="download-btn">Download Magnetic Sort</a>
           </div>
         </div>
-  
+
         <div class="screen">
           <div class="language-selector">
             <div class="language-option active" data-lang="python">Python</div>
@@ -47,85 +57,70 @@
             <div class="language-option" data-lang="bash">Bash</div>
           </div>
           <button class="copy-btn">Copy</button>
-          <div id="code-content">
-            <pre id="screen-text">from geass_sort import hybrid_sort
-  
-  arr = [5, 2, 9, 1, 5, 6]
-  sorted_arr = hybrid_sort(arr)
-  print(sorted_arr)  # Output: [1, 2, 5, 5, 6, 9]</pre>
-          </div>
+          <pre><code id="screen-text" class="language-python"></code></pre>
         </div>
       </div>
     </main>
-    
-    
   </div>
+
   <footer class="footer">
-    <p>&copy; 2025 Geass Sort. All rights reserved.</p>
+    <p>&copy; 2025 Magnetic Sort. All rights reserved.</p>
   </footer>
+
   <script src="../js/script.js"></script>
   <script>
-    // Language selection functionality
     const languageOptions = document.querySelectorAll('.language-option');
     const codeContent = document.getElementById('screen-text');
     const copyButton = document.querySelector('.copy-btn');
 
-    // Code snippets for each language
     const codeSnippets = {
-      python: `
-//Installation:
-pip install geass_sort
-      
-<text style="color:orange">from</text> <text style="color:white">geass_sort</text> <text style="color:orange">import</text> <text style="color:white">hybrid_sort</text>
-<text style="color:white">arr = [5, 2, 9, 1, 5, 6]</text>
-<text style="color:white">sorted_arr = <text style="color:purple">hybrid_sort</text><text style="color:orange">(</text>arr<text style="color:orange">)</text></text>
-<text style="color:white"><text style="color:purple">print</text><text style="color:orange">(</text>sorted_arr<text style="color:orange">)</text></text>  <text style="color:green"># Output: [1, 2, 5, 5, 6, 9]</text>`,
+      python: `# Installation:
+pip install magnetic-sort
 
-java: `
-<text style="color:blue">import</text> <text style="color:white">com.geass.sort.HybridSort</text><text style="color:orange">;</text>
+from magnetic_sort import magnetic_sort
 
-<text style="color:blue">public class</text> <text style="color:white">Main</text> <text style="color:purple">{</text>
-  <text style="color:blue">public static void</text> <text style="color:white">main</text><text style="color:orange">(</text><text style="color:white">String</text><text style="color:orange">[]</text> <text style="color:white">args</text><text style="color:orange">)</text> <text style="color:purple">{</text>
-      <text style="color:white">int</text><text style="color:green">[]</text> <text style="color:white">arr</text> <text style="color:orange">=</text> <text style="color:purple">{</text><text style="color:white">5, 2, 9, 1, 5, 6</text><text style="color:purple">};</text>
-      <text style="color:white">int</text><text style="color:green">[]</text> <text style="color:white">sortedArr</text> <text style="color:orange">=</text> <text style="color:white">HybridSort</text><text style="color:orange">.</text><text style="color:white">sort</text><text style="color:orange">(</text><text style="color:white">arr</text><text style="color:orange">);</text>
-      <text style="color:white">System</text><text style="color:orange">.</text><text style="color:white">out</text><text style="color:orange">.</text><text style="color:white">println</text><text style="color:orange">(</text><text style="color:white">Arrays</text><text style="color:orange">.</text><text style="color:white">toString</text><text style="color:orange">(</text><text style="color:white">sortedArr</text><text style="color:orange">));</text> <text style="color:green">// [1, 2, 5, 5, 6, 9]</text>
-  <text style="color:purple">}</text>
-<text style="color:purple">}</text>`,
+arr = [5, 2, 9, 1, 5, 6]
+sorted_arr = magnetic_sort(arr)
+print(sorted_arr)  # Output: [1, 2, 5, 5, 6, 9]`,
 
-javascript: `
-//Installation:
-npm install geass_sort
-      
-<text style="color:orange">const</text> <text style="color:white">{ hybridSort }</text> <text style="color:orange">=</text> <text style="color:white">require</text><text style="color:orange">(</text>'geass-sort'<text style="color:orange">);</text>
+      java: `import com.magnetic.sort.MagneticSort;
 
-<text style="color:orange">const</text> <text style="color:white">arr</text> <text style="color:orange">=</text> <text style="color:orange">[</text><text style="color:white">5, 2, 9, 1, 5, 6</text><text style="color:orange">];</text>
-<text style="color:orange">const</text> <text style="color:white">sortedArr</text> <text style="color:orange">=</text> <text style="color:white">hybridSort</text><text style="color:orange">(</text><text style="color:white">arr</text><text style="color:orange">);</text>
-<text style="color:white">console</text><text style="color:orange">.</text><text style="color:white">log</text><text style="color:orange">(</text><text style="color:white">sortedArr</text><text style="color:orange">);</text> <text style="color:green">// [1, 2, 5, 5, 6, 9]</text>`,
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 9, 1, 5, 6};
+        int[] sortedArr = MagneticSort.sort(arr);
+        System.out.println(Arrays.toString(sortedArr)); // [1, 2, 5, 5, 6, 9]
+    }
+}`,
 
-bash: `
-<text style="color:green"># Assuming geass-sort is installed and in PATH</text>
+      javascript: `// Installation:
+npm install magnetic-sort
 
-<text style="color:white">>>hsort --4, 79, 20, 32, 100, 32, 48, 78</text>`
+const { magneticSort } = require('magnetic-sort');
+
+const arr = [5, 2, 9, 1, 5, 6];
+const sortedArr = magneticSort(arr);
+console.log(sortedArr); // [1, 2, 5, 5, 6, 9]`,
+
+      bash: `# Usage via CLI (after installation):
+magneticsort 5 2 9 1 5 6
+# Output: 1 2 5 5 6 9`
     };
 
-    // Handle language selection
     languageOptions.forEach(option => {
       option.addEventListener('click', () => {
-        // Remove active class from all options
         languageOptions.forEach(opt => opt.classList.remove('active'));
-        // Add active class to clicked option
         option.classList.add('active');
-        // Update code content
+
         const lang = option.getAttribute('data-lang');
-        codeContent.innerHTML = codeSnippets[lang];
-        console.log(codeSnippets[lang])
+        codeContent.className = `language-${lang}`;
+        codeContent.textContent = codeSnippets[lang];
+        Prism.highlightElement(codeContent);
       });
     });
 
-    // Copy button functionality
     copyButton.addEventListener('click', () => {
-      const textToCopy = codeContent.textContent;
-      navigator.clipboard.writeText(textToCopy).then(() => {
+      navigator.clipboard.writeText(codeContent.textContent).then(() => {
         copyButton.textContent = 'Copied!';
         copyButton.classList.add('copied');
         setTimeout(() => {
@@ -134,8 +129,10 @@ bash: `
         }, 2000);
       });
     });
-    // Initialize with Python code colored
-  codeContent.innerHTML = codeSnippets.python;
+
+    // Load default code
+    codeContent.textContent = codeSnippets.python;
+    Prism.highlightElement(codeContent);
   </script>
 </body>
 </html>

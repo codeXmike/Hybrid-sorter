@@ -183,6 +183,76 @@ img{
     height: 100px;
     border-radius: 50%;
 }
+.indiPop{
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  left: 25%;
+  border-radius: 20px;
+  background-color: #1e293b;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  margin: auto;
+  flex-direction: column;
+}
+.indiPop>.strole{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.indiPop>.ndrole{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.strole>.uPic{
+  padding: .5rem 0;
+  margin: auto 0;
+}
+.strole>.uName{
+  font-size:  24px;
+  font-weight: 800;
+  margin: auto 0;
+}
+.xB{
+  margin: auto 0;
+}
+.xB>button{
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgba(99, 30, 30, 0.74);
+}
+.ndrole {
+  color: white;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.ndrole h3 {
+  margin-top: 0;
+  color: #38bdf8;
+}
+
+.skills ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.contact a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 690px) {
     .nav {
       flex-direction: column;
@@ -259,6 +329,32 @@ img{
   
     .services {
       cursor: pointer;
+    }
+    .strole{
+      justify-content: space-evenly;
+    }
+    .xB{
+      padding: 0 .8rem;
+    }
+    .uName{
+      padding: 0 1rem;
+      font-weight: 400;
+      font-size: 13px;
+    }
+    .indiPop{
+      overflow: scroll;
+      display: none;
+      position: absolute;
+      z-index: 10000;
+      left: 2%;
+      border-radius: 20px;
+      background-color: #1e293b;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+      margin: auto;
+      flex-direction: column;
     }
   }
 @media (max-width: 508px) {
