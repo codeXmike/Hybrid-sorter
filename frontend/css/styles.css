@@ -188,9 +188,15 @@ body {
     align-items: flex-start;
     padding: 1rem;
   }
+  .body p{
+    font-size: 1rem;
+  }
 
   .hamburger {
     display: block;
+  }
+  .set1{
+    width: 200px;
   }
   
 
@@ -214,7 +220,7 @@ body {
   }
 
   .bHead {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
   }
 
