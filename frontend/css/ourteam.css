@@ -45,11 +45,12 @@ body{
   .set1 {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 300px;
+    width: 100%;
   }
   
   .logo {
+	text-align: center;
+	width: 70%;
     font-size: 1.8rem;
     font-weight: bold;
     color: #ffffff;

@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us</title>
   <link rel="stylesheet" href="../css/contact.css" />
-
 </head>
 <body>
   <div class="wrapper">
@@ -20,31 +19,32 @@
         <li class="chover">
           <a class="services">Services</a>
           <ul class="sList">
-            <li class="sitems"><a href="">Demo</a></li>
+            <li class="sitems"><a href="demo.html">Demo</a></li>
             <li class="sitems"><a href="product.html">Product</a></li>
           </ul>
         </li>
         <li><a class="citems" href="ourteam.html">Our Team</a></li>
-        <li><a class="citems" href="contact.html">Contact</a></li>
+        <li><a class="citems active" href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <div class="wrap">
+
+    <main class="wrap">
       <div class="contact-container">
         <div class="form-box">
-          <h2>Get in Touch</h2>
+          <h2>Contact Us</h2>
+          <p class="intro-text">We'd love to hear from you. Please fill out the form below.</p>
           <form id="contactForm" class="contactForm">
             <input type="text" name="from_name" placeholder="Your Name" required />
             <input type="email" name="from_email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
             <p id="responseMessage"></p>
           </form>
         </div>
       </div>
-    </div>
-    
+    </main>
   </div>
-  
+
   <script src="../js/script.js"></script>
 </body>
 </html>

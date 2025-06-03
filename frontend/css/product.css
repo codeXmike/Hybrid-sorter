@@ -81,11 +81,12 @@
   .set1 {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 250px;
+    width: 100%;
   }
   
   .logo {
+	text-align: center;
+	width: 70%;
     font-size: 1.8rem;
     font-weight: bold;
     color: #ffffff;
@@ -229,10 +230,8 @@
     box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
     min-height: 340px;
     max-height: 340px;
-    position: relative;
     white-space: pre;
-    overflow-x: auto;
-    overflow-y: hidden;
+    position: relative;
   }
   
   .screen {
@@ -329,10 +328,10 @@
     background-color: #4CAF50;
   }
   
-  #code-content {
+  pre {
     padding-top: 10px;
     width: 100%;
-    overflow-x: auto;
+    overflow: scroll;
     scrollbar-gutter: stable;
   }
   
