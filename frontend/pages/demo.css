@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: linear-gradient(to bottom right, #485261, #0c0c1e);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main {
+	width: 70%;
+	border-radius: 15px;
+	padding: 1.7rem 5%;
+	background-color: rgba(205, 205, 205, 0.196);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.welcome-text{
+	font-size: 1.8rem;
+	padding: .3rem 0;
+}
+.inputs{
+	font-weight: 700;
+	padding: 3rem 0 0 0;
+	width: 100%;
+	font-family: 'abel';
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+}
+.inputs>.input-box{
+	width: 75%;
+	
+}
+.input-sort-type>select{
+	color: rgb(0, 0, 0);
+	background-color: rgb(164, 195, 212);
+	height: 40px;
+	border-radius: 20px;
+	width: 100%;
+}
+.inputs>.input-box>input{
+	width: 100%;
+	border-radius: 20px;
+	border: 1.2px solid black;
+	height: 70px;
+	padding: .7rem .3rem;
+	font-size: 18px;
+}
+.sort-select{
+	margin: 0 .1rem;
+	width: 50%;
+	padding: .7rem .3rem;
+}
+.sort-button{
+	
+	padding: .3rem .3rem;
+}
+.sort-button>button:hover{
+	font-weight: 500;
+	color: azure;
+	background-color: rgb(82, 82, 120);
+}
+.sort-button>button{
+	cursor: pointer;
+	transition: all 1s ease-in-out;
+	border: 0;
+	padding: .8rem 1.4rem;
+	background-color: rgb(160, 192, 192);
+	color: rgb(0, 0, 0);
+	border-radius: 10px;
+}
